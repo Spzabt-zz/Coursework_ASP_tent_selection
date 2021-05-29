@@ -1,0 +1,31 @@
+﻿@{
+	Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Choosing tent</h3>
+<br />
+<form action="" method="post">
+    <input type="hidden" name="TentId" value="@ViewBag.Id" />
+    <input type="hidden" name="Name" value="@ViewBag.Name" />
+    <input type="hidden" name="SelectedItem" value="@ViewBag.SelectedItem" />
+    <input type="hidden" name="TentSelectionDiscount" value="@ViewBag.TentSelectionDiscount" />
+    <table>
+        <tbody>
+            <tr>
+                <td>FIO</td>
+                <td><input type="text" name="FIO" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="Email" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="Address" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Choose tent" /></td>
+            </tr>
+        </tbody>
+    </table>
+</form>

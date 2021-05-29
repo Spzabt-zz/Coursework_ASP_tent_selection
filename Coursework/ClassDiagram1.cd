@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Coursework.Models.Tent" Collapsed="true">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="System.Object" ManuallyRouted="true">
+      <Path>
+        <Point X="13.5" Y="1.312" />
+        <Point X="13.5" Y="2.968" />
+        <Point X="8.021" Y="2.968" Type="JumpStart" />
+        <Point X="7.854" Y="2.968" Type="JumpEnd" />
+        <Point X="7.208" Y="2.968" Type="JumpStart" />
+        <Point X="7.042" Y="2.968" Type="JumpEnd" />
+        <Point X="4.083" Y="2.968" Type="JumpStart" />
+        <Point X="3.917" Y="2.968" Type="JumpEnd" />
+        <Point X="2.889" Y="2.968" />
+        <Point X="2.889" Y="4.031" />
+        <Point X="3.25" Y="4.031" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAASAgAAAABAAAACQCACAQAAAAAgAAAAEAAAE=</HashCode>
+      <FileName>Models\Tent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.CampingTent" Collapsed="true">
+    <Position X="1.25" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAEBAAAACAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\CampingTent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.ExpeditionaryTent" Collapsed="true">
+    <Position X="3.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEBAAAACAAAAAAQAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\ExpeditionaryTent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.MountainHikingTent" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEBAAAACAAAAAAAAAAAAAAAAAEAAE=</HashCode>
+      <FileName>Models\MountainHikingTent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.TentSelection" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAgAACAAAACAAAAEAAAAAAAAAAQCABAAAAAAAAA=</HashCode>
+      <FileName>Models\TentSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.DbInitializer" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DbInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Coursework.Models.TentContext">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <AssociationLine Name="TentSelections" Type="Coursework.Models.TentSelection">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.292" Y="0.024" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Tents" Type="Coursework.Models.Tent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.752" Y="0.252" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TentContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TentSelections" />
+      <Property Name="Tents" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="System.Data.Entity.DbContext" Collapsed="true">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Data.Entity.DropCreateDatabaseAlways&lt;TContext&gt;" Collapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="12.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Coursework.Controllers.HomeController" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="_tentContext" Type="Coursework.Models.TentContext" ManuallyRouted="true">
+      <Path>
+        <Point X="15.5" Y="3.596" />
+        <Point X="13.583" Y="3.596" Type="JumpStart" />
+        <Point X="13.417" Y="3.596" Type="JumpEnd" />
+        <Point X="8.021" Y="3.596" Type="JumpStart" />
+        <Point X="7.854" Y="3.596" Type="JumpEnd" />
+        <Point X="7.125" Y="3.596" />
+        <Point X="7.125" Y="2.747" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.181" Y="0.547" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAiAAEAQAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_tentContext" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="15.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

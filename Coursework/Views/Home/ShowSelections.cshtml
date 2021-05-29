@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Your basket</h3>
+<br />
+<table border="1" width="100%" cellpadding="5">
+    <thead>
+        <tr>
+            <td><h4>Fio</h4></td>
+            <td><h4>Address</h4></td>
+            <td><h4>Email</h4></td>
+            <td><h4>DateTime</h4></td>
+            <td><h4>Chosen tent</h4></td>
+            <td><h4>With discount (only for Богдан, Вася, Валера)</h4></td>
+            <td>&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var tentSelections in ViewBag.TentSelections)
+            {
+                <tr>
+                    <td>@tentSelections.Fio</td>
+                    <td>@tentSelections.Address</td>
+                    <td>@tentSelections.Email</td>
+                    <td>@tentSelections.DateTime</td>
+                    <td>
+                        <a href="\Home\ShowTentCharacteristic\@tentSelections.TentId">@tentSelections.SelectedItem</a>
+                    </td>
+                    <td>@tentSelections.TentSelectionDiscount (UAH)</td>
+                    <td>
+                    <a href="\Home\DeleteTent\@tentSelections.TentSelectionId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

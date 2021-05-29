@@ -1,0 +1,15 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<form onsubmit='return confirm("Click OK to delete tent?");' method="post">
+    <input type="hidden" name="TentId" value="@ViewBag.Id" />
+    <input type="hidden" name="DateTime" value="@ViewBag.DateTime" />
+    <input type="hidden" name="Email" value="@ViewBag.Email" />
+    <input type="hidden" name="Fio" value="@ViewBag.Fio" />
+    <input type="hidden" name="Address" value="@ViewBag.Address" />
+    <input type="hidden" name="SelectedItem" value="@ViewBag.SelectedItem" />
+    <input type="hidden" name="TentSelectionId" value="@ViewBag.TentSelectionId" />
+    <input name="delall" type="submit" value="Delete tent" />
+</form>

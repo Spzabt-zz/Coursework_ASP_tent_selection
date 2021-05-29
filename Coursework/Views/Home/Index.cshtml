@@ -1,0 +1,100 @@
+﻿@using Coursework.Models
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Tent selection</h3>
+<br />
+<table border="1" width="100%" cellpadding="5">
+    <thead>
+        <tr>
+            <td><h4>Name</h4></td>
+            <td><h4>Image</h4></td>
+            <td><h4>Producer</h4></td>
+            <td><h4>Price (UAH)</h4></td>
+            <td><h4>Capacity</h4></td>
+            <td><h4>Weight</h4></td>
+            <td><h4>Waterproof</h4></td>
+            <td><h4>Ventilation System</h4></td>
+            <td><h4>Room count</h4></td>
+            <td><h4>Mosquito net</h4></td>
+            <td><h4>Discount</h4></td>
+            <td><h4>Description</h4></td>
+            <td>&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var tent in ViewBag.Tents)
+            {
+                <tr>
+                    <td>@tent.Name</td>
+                    @{
+                        switch (tent)
+                        {
+                            case MountainHikingTent mountain:
+                                <td><img src="\Content\Images\45284758.jpg" width="320" height="240" alt="Sample Photo" /></td>
+                                break;
+                            case ExpeditionaryTent expeditionary:
+                                <td><img src="\Content\Images\100235260.jpg" width="320" height="240" alt="Sample Photo" /></td>
+                                break;
+                            case CampingTent camping:
+                                <td><img src="\Content\Images\162631834.jpg" width="320" height="240" alt="Sample Photo" /></td>
+                                break;
+                        }
+                    }
+                    <td>@tent.Producer</td>
+                    <td>@tent.Price</td>
+                    <td>@tent.Capacity</td>
+                    <td>@tent.Weight kg</td>
+                    <td>@tent.WaterProof</td>
+                    @{
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            if (tent is MountainHikingTent)
+                            {
+                                if (i == 0)
+                                {
+                                    <td>@tent.ShowInfo()</td>
+                                }
+                                else
+                                {
+                                    <td>-</td>
+                                }
+                            }
+                            if (tent is ExpeditionaryTent)
+                            {
+                                if (i == 1)
+                                {
+                                    <td>@tent.ShowInfo()</td>
+                                }
+                                else
+                                {
+                                    <td>-</td>
+                                }
+                            }
+                            if (tent is CampingTent)
+                            {
+                                if (i == 2)
+                                {
+                                    <td>@tent.ShowInfo()</td>
+                                }
+                                else
+                                {
+                                    <td>-</td>
+                                }
+                            }
+                        }
+                    }
+                    <td>@tent.Discount %</td>
+                    <td>@tent.ShowTentDescription()</td>
+                    <td>
+                        <a href="/Home/Select/@tent.Id">Select</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

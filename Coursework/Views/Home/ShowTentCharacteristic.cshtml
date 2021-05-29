@@ -1,0 +1,43 @@
+﻿@using Coursework.Models
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Tent characteristic</h3>
+
+<br />
+<ul>
+    <li>Name: @ViewBag.Name</li>
+    <li>Producer: @ViewBag.Producer</li>
+    <li>Price: @ViewBag.Price</li>
+    <li>Capacity: @ViewBag.Capacity</li>
+    <li>Weight: @ViewBag.Weight</li>
+    <li>Waterproof: @ViewBag.WaterProof</li>
+    @{
+        if (ViewBag.MosquitoNet != null)
+        {
+            <li>@ViewBag.MosquitoNet</li>
+        }
+        else
+        {
+            <li>MosquitoNet: no data</li>
+        }
+        if (ViewBag.RoomCount != null)
+        {
+            <li>@ViewBag.RoomCount</li>
+        }
+        else
+        {
+            <li>RoomCount: no data</li>
+        }
+        if (ViewBag.VentilationSystem != null)
+        {
+            <li>@ViewBag.VentilationSystem</li>
+        }
+        else
+        {
+            <li>VentilationSystem: no data</li>
+        }
+    }
+</ul>

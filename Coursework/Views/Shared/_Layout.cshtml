@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="~/Content/Site.css" />
+	<title></title>
+</head>
+<body>
+	<div>
+		@Html.ActionLink("On main tab", "Index", "Home")
+		@Html.ActionLink("Show basket", "ShowSelections", "Home", null, new { @class = "ShowSelectionsLink"})
+
+		@RenderBody()
+	</div>
+</body>
+</html>

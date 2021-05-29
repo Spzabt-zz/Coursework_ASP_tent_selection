@@ -1,0 +1,12 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: white;
+    font-family: Calibri, Arial, 'Times New Roman';
+}
+
+.ShowSelectionsLink {
+    color: green;
+    margin-top: 20px;
+    margin-left: 500px;
+}
