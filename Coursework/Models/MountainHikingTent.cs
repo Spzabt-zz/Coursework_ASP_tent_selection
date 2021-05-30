@@ -46,9 +46,8 @@ namespace Coursework.Models
             return finalPrice;
         }
 
-        public override float CalculateDiscountByCorrectEmail(string email, int price)
+        public override float CalculateDiscountByCorrectEmail(string email, int price, ref float finalPrice)
         {
-            float finalPrice = 0;
             //string nameToLower = name.ToLower();
             if (email.ToLower().Contains("@gmail.com"))
             {
@@ -56,7 +55,7 @@ namespace Coursework.Models
             }
             else
             {
-                finalPrice = price * 1.3f;
+                finalPrice *= 1.3f;
             }
 
             return finalPrice;

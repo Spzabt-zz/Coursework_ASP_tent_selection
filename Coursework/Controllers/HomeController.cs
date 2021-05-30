@@ -38,7 +38,8 @@ namespace Coursework.Controllers
             selection.DateTime = DateTime.Now;
             var param = _tentContext.Tents.Find(selection.TentId);
             selection.TentSelectionDiscount = param.CalculateDiscountByName(selection.Fio, param.Price);
-            selection.TentSelectionDiscount = param.CalculateDiscountByCorrectEmail(selection.Email, param.Price);
+            float finalPrice = selection.TentSelectionDiscount;
+            selection.TentSelectionDiscount = param.CalculateDiscountByCorrectEmail(selection.Email, param.Price, ref finalPrice);
 
             _tentContext.TentSelections.Add(selection);
             _tentContext.SaveChanges();

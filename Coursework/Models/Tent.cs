@@ -42,7 +42,7 @@ namespace Coursework.Models
 
         public abstract float CalculateDiscountByName(string name, int price);
 
-        public abstract float CalculateDiscountByCorrectEmail(string email, int price);
+        public abstract float CalculateDiscountByCorrectEmail(string email, int price, ref float finalPrice);
 
         public abstract string ShowTentDescription();
     }
